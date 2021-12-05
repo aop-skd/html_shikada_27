@@ -1,0 +1,375 @@
+/* ここから下に記載していく */
+
+
+/* 全体共通部分 */
+
+    html{
+        font-size: 62.5%;
+    }
+    /* rem指定16px*62.5%= 10px */
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    /* 画像が持つ横幅より大きくなってしまわないようにする */
+
+    body{
+        color: #222;
+        font-size: 1.6rem;
+        font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+        max-width: 1200px;
+        margin:auto;
+
+    }
+    /* 基本設定は文字黒で本文16px、最大1100px、中央揃え
+    !widthで幅を決めると左側にいく。たものを中央に持ってくるのはMargin：AUTOのみ。!*/
+
+    .text_center{
+        text-align: center;
+    }
+    /* テキストセンター */
+
+    .en_title_y{
+        color:#ffd61a;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        margin: 0 0 30px;
+        font-weight: bold;
+    }
+    /* 英語タイトル共通 黄色 */
+
+    .en_title_b{
+        color:black;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        margin: 0 0 30px;
+        font-weight: bold;
+    }
+    /* 英語タイトル共通 黒 */
+
+    .jn_title{
+        color:#222;
+        font-size: 1.8rem;
+        margin: 0 0 60px;
+    }
+    /* 日本語タイトル共通 */
+
+    .bgc_gray{
+        background-color: #fafafa;
+    }
+
+/* Navigation部分 */
+
+    .navi_wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    /* IMGとnavigationを横並びにして左右に開く */
+
+    .navi_list{
+        display: flex;
+    }
+    /* navigation内アイテムを横並びに */
+
+    .navi_item{
+        margin:50px 50px 50px 0;
+    }
+    /* navigation内アイテムの配置調整 */
+    
+    .navi_item>a{
+        color:#222;
+        text-transform: uppercase;
+    }
+    /* 文字の指定 */
+
+/* title部分 */
+
+    .title_box{
+        height: 500px;
+        width: 1200px;
+        margin: 0 auto 80px;
+        background-color: #ffd61a;
+      }
+
+    .title_main{
+        color: #fff;
+        font-size: 3.6rem;
+        margin:0 0 30px;
+        margin-bottom: 30px;
+        padding-top: 170px;
+        font-weight: bold;
+    }
+    /* メインタイトルの指定 */
+
+    .title_sub{
+        color: #fff;
+        font-size: 1.6rem;
+
+    }
+    /* サブタイトルの指定 */
+    .container{
+        width: 100%;
+    }
+    
+    .image{
+        width: 100%;
+        opacity: 0;
+        margin-left: 50%;
+        transform: translateX(-200%);
+        opacity: 0;
+        animation: slide-in-anim 4s ease-out forwards;
+    }
+    
+        @keyframes slide-in-anim {
+            20% {
+                opacity: 0;
+            }
+            60% {
+                transform: translateX(-45%);
+            }
+            75% {
+                transform: translateX(-52%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%);
+            }
+        }
+    /* タイトルのアニメーション */
+
+
+/* about部分 */
+
+    .about_para{
+        margin:0 0 40px;
+        line-height: 2;
+
+    }
+    /* 文章の指定 */
+
+    .about_main{
+        padding:60px 0 40px 0;
+
+    }
+    /* 全体を囲って余白調整 */
+
+    .about_pic{
+        display:flex;
+        justify-content: center;
+    }
+    /* 画像を横並べにする */
+
+    .about_eyecatch{
+        width:100%;
+    }
+
+
+/* Course部分 */
+
+    .course_para{
+        line-height: 2;
+    }
+    /* 文章の指定 */
+
+    .course_main{
+        padding:60px 0 40px 0;
+    }
+    /* 上部分文章囲っての余白調整 */
+
+
+    .course_flex{
+        display: flex;
+        align-items: center;
+        height: auto;
+
+    }
+    /* ６つの画像を（2つ横並び）*3段とする */
+
+    .course_item{
+        flex-basis: 50%;
+        flex-shrink: 0;
+        height: auto;
+    }
+    /* 2つの横並びを横50%毎に(画像) */
+
+    .course_item_right{
+        flex-basis: 50%;
+        padding-left: 50px;
+        padding-right: 70px;
+        line-height: 2;
+    }
+    /* 右側文章レイアウト */
+
+    .course_item_left{
+        flex-basis:50%;
+        padding-left: 70px;
+        padding-right: 50px;
+        text-align: left;
+        line-height: 2;
+    
+    }
+    /* 左側文章レイアウト */
+
+    .course_title{
+        font-size: 2.0rem;
+        font-weight: bold;
+        line-height: 2;
+        margin: 0 0 40px 0;
+    }
+    /* ?! line-heightを入れるとその分ずれる。 */
+
+
+
+/* News部分 */
+
+    .news_wrapper{
+        margin: 60px 0 60px 0;
+    }
+    /* 全体の設定 */
+
+    .news_flex{
+        display: flex;
+        max-width:960px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+        justify-content: space-between;
+        
+    }
+    /* newsエリアのフレックスボックス設定 */
+
+    .news_date{
+        margin:30px 0 24px 0;
+    }
+    /* 日付部分のレイアウト */
+
+    .news_para{
+        margin:0 30px 0 0;
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    /* 文章部分のレイアウト */
+    
+    .hover1 {
+        display: inline-block;
+        background: #fff;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+    .hover1:hover {
+        background: #cacaca;
+        color: #fff;
+    }
+    /* hoveractionの設定 */
+
+    .news_more{    
+        display:block;
+        margin:auto;
+        padding:21px 0;
+        background-color: #ffd61a;
+        font-size:1.8rem;
+        color: white;
+        width: 300px;
+        text-align: center;
+
+    }
+    /* Moreボタンの設定 */
+
+    .hover2:hover {
+        color:#222;
+        text-decoration: underline;
+    }
+    .hover2:hover::after {
+        width: 100%;
+    }
+    /* hoveractionの設定 */
+
+
+/* Access部分 */
+
+    .access_wrapper{
+        padding: 60px 0 30px 0;
+    }
+    /* 全体の余白調整 */
+
+    .map{
+        width:1200px;
+        height:200px;
+    }
+    /* 地図の大きさを指定 */
+
+    .access_data{
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        margin: auto;
+        padding-top: 60px;
+    }
+
+    /* アクセスデータの全体の配置 */
+
+    .access_dt{
+        width: 30%;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    /* アクセス左側デザイン */
+
+    .access_dd{
+        width: 70%;
+        text-align-last: left;     
+        margin-bottom: 30px;
+    }
+
+    /* アクセス右側デザイン */
+
+
+/* Contact部分 */
+
+    .contact_wrapper{
+        padding: 60px 0 30px 0;
+    }
+    /* contact全体の配置 */
+
+    .contact_para{
+        line-height: 2;
+        margin-bottom: 30px;
+    }
+    /* contactの文章部分のレイアウト */
+
+    .form_inner{
+        display: flex;
+        flex-wrap: wrap;
+        margin:auto;
+        width: 640px;
+    }
+
+    .form_title{
+        width:240px;
+
+    }
+
+    .form_item{
+        width:400px;
+        
+    }
+
+    .form_parts{
+        appearance:none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    
+        font-size: 1.6rem;
+        border: solid 1px #bfbfbf;
+        padding:8px;
+        width:328px;
+        height: 36px;
+        box-sizing: border-box;
+    
+
+
+
+    
